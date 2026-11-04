@@ -1,0 +1,35 @@
+{
+  "name": "shopnow-qa-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "preinstall": "node app/check-node.mjs",
+    "dev": "tsx app/server/index.ts",
+    "predev": "node app/check-node.mjs",
+    "reset": "tsx app/server/reset.ts",
+    "test": "playwright test",
+    "pretest": "node app/check-node.mjs",
+    "test:ui": "playwright test --ui",
+    "postinstall": "playwright install chromium"
+  },
+  "dependencies": {
+    "express": "4.21.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.48.2",
+    "@types/express": "4.17.21",
+    "@types/node": "22.9.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.3",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "vite": "5.4.10"
+  }
+}

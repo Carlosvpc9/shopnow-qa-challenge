@@ -1,0 +1,184 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ana Garcia",
+      "email": "ana@shopnow.test",
+      "password": "Ana12345"
+    },
+    {
+      "id": 2,
+      "name": "Bruno Diaz",
+      "email": "bruno@shopnow.test",
+      "password": "Bruno12345"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Ceramic mug",
+      "category": "Home",
+      "price": 8.35,
+      "stock": 25,
+      "description": "350 ml glazed ceramic mug. Microwave safe."
+    },
+    {
+      "id": 2,
+      "name": "Bluetooth headphones",
+      "category": "Tech",
+      "price": 49.99,
+      "stock": 3,
+      "description": "Wireless headphones with 20 hours of battery and a charging case."
+    },
+    {
+      "id": 3,
+      "name": "Basic T-shirt",
+      "category": "Clothing",
+      "price": 14.35,
+      "stock": 40,
+      "description": "Combed cotton T-shirt, regular fit."
+    },
+    {
+      "id": 4,
+      "name": "Urban backpack",
+      "category": "Accessories",
+      "price": 39.9,
+      "stock": 12,
+      "description": "20 liter backpack with a 15\" laptop compartment."
+    },
+    {
+      "id": 5,
+      "name": "Desk lamp",
+      "category": "Home",
+      "price": 24.55,
+      "stock": 8,
+      "description": "LED lamp with an articulated arm and three brightness levels."
+    },
+    {
+      "id": 6,
+      "name": "Mechanical keyboard",
+      "category": "Tech",
+      "price": 89.9,
+      "stock": 5,
+      "description": "Compact mechanical keyboard with red switches and backlight."
+    },
+    {
+      "id": 7,
+      "name": "Thermal bottle",
+      "category": "Accessories",
+      "price": 18.55,
+      "stock": 30,
+      "description": "750 ml stainless steel bottle. Keeps temperature for 12 hours."
+    },
+    {
+      "id": 8,
+      "name": "Ergonomic chair",
+      "category": "Home",
+      "price": 129,
+      "stock": 2,
+      "description": "Office chair with adjustable lumbar support and 3D armrests."
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "createdAt": "2026-10-02T15:10:00.000Z",
+      "items": [
+        {
+          "productId": 3,
+          "name": "Basic T-shirt",
+          "price": 14.35,
+          "quantity": 2
+        }
+      ],
+      "coupons": [],
+      "subtotal": 28.7,
+      "discount": 0,
+      "total": 28.7,
+      "shipping": {
+        "name": "Ana Garcia",
+        "address": "1234 Corrientes Ave, Buenos Aires"
+      },
+      "paymentId": 1
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "createdAt": "2026-10-15T02:30:00.000Z",
+      "items": [
+        {
+          "productId": 5,
+          "name": "Desk lamp",
+          "price": 24.55,
+          "quantity": 1
+        }
+      ],
+      "coupons": [],
+      "subtotal": 24.55,
+      "discount": 0,
+      "total": 24.55,
+      "shipping": {
+        "name": "Ana Garcia",
+        "address": "1234 Corrientes Ave, Buenos Aires"
+      },
+      "paymentId": 2
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "createdAt": "2026-10-20T13:45:00.000Z",
+      "items": [
+        {
+          "productId": 6,
+          "name": "Mechanical keyboard",
+          "price": 89.9,
+          "quantity": 1
+        }
+      ],
+      "coupons": [
+        {
+          "code": "FLOCK10",
+          "percent": 10
+        }
+      ],
+      "subtotal": 89.9,
+      "discount": 8.99,
+      "total": 80.91,
+      "shipping": {
+        "name": "Bruno Diaz",
+        "address": "742 Evergreen St, Rosario"
+      },
+      "paymentId": 3
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "orderId": 1,
+      "amount": 28.7,
+      "cardLast4": "4242",
+      "status": "approved",
+      "createdAt": "2026-10-02T15:10:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "orderId": 2,
+      "amount": 24.55,
+      "cardLast4": "4242",
+      "status": "approved",
+      "createdAt": "2026-10-15T02:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "orderId": 3,
+      "amount": 80.91,
+      "cardLast4": "1881",
+      "status": "approved",
+      "createdAt": "2026-10-20T13:45:00.000Z"
+    }
+  ]
+}
